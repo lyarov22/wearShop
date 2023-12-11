@@ -118,76 +118,31 @@
           class="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full mt-14 self-end max-md:mt-10"
         />
       </div>
-      <div
+      <div id="new"
         class="text-black text-2xl font-bold leading-8 self-stretch whitespace-nowrap mt-10 max-md:max-w-full"
       >
         Новое поступление
       </div>
       <div class="self-stretch mt-10 max-md:max-w-full">
         <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-          <div
-            class="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0"
-          >
-            <div
-              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
-            >
-              <img
-                loading="lazy"
-                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
-              />
-              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
-                Adiddas Beluga
+          {% for product in latest_products %}
+            <a href="{{ product.get_absolute_url }}" class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
+              <div class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6">
+
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="">
+
+                <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
+                  {{ product.name }}
+                </div>
+
+                <div class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-5">
+                  {{ product.price }} тг
+                </div>
               </div>
-              <div
-                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-4"
-              >
-                20.000 тенге
-              </div>
-            </div>
+            </a>
+            {% endfor %}
           </div>
-          <div
-            class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0"
-          >
-            <div
-              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
-            >
-              <img
-                loading="lazy"
-                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
-              />
-              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
-                Nike Zoom
-              </div>
-              <div
-                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-5"
-              >
-                35, 000RWF
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0"
-          >
-            <div
-              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
-            >
-              <img
-                loading="lazy"
-                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
-              />
-              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
-                Nike Air Jordan XT
-              </div>
-              <div
-                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-5"
-              >
-                35, 000RWF
-              </div>
-            </div>
-          </div>
+          
           <div
             class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0"
           >
@@ -215,7 +170,7 @@
         <div
           class="text-black text-opacity-80 text-sm leading-6 grow whitespace-nowrap my-auto"
         >
-          View all new arrivals
+          Посмотреть все
         </div>
         <img
           loading="lazy"
@@ -226,17 +181,17 @@
       <div
         class="text-black text-4xl font-bold leading-10 self-center whitespace-nowrap mt-28 max-md:mt-10"
       >
-        Good sneakers
+        Хорошие вещи
       </div>
       <div
         class="text-black text-4xl font-bold leading-10 self-center whitespace-nowrap mt-4"
       >
-        take you good places
+        для хороших мест
       </div>
       <div
         class="text-black text-opacity-70 text-base leading-6 self-center whitespace-nowrap mt-6"
       >
-        look no further, this is where you find the best pair!
+        Не ищите дальше, здесь вы найдете лучшую одежду!
       </div>
       <div
         class="self-center w-full max-w-[996px] mt-16 max-md:max-w-full max-md:mt-10"
@@ -252,9 +207,9 @@
                 class="aspect-square object-contain object-center w-[152px] overflow-hidden z-[1] max-w-full"
               />
               <div class="text-black text-2xl leading-8 self-stretch mt-0">
-                Currated
+                Самые
                 <br />
-                & unique collection
+                уникальные коллекции
               </div>
             </div>
           </div>
@@ -271,9 +226,9 @@
             class="flex flex-col items-stretch w-[27%] ml-5 max-md:w-full max-md:ml-0"
           >
             <div class="text-black text-2xl leading-8 my-auto max-md:mt-10">
-              Buy the latest
+              Покупайте новинки
               <br />
-              & define the trends
+              и будьте в тренде
             </div>
           </div>
         </div>
@@ -281,79 +236,9 @@
       <div
         class="text-black text-2xl leading-8 self-center whitespace-nowrap mt-5"
       >
-        100% Original sneakers
+        100% Оригинальные бренды
       </div>
-      <div
-        class="bg-black bg-opacity-10 self-center w-[1184px] shrink-0 max-w-full h-px mt-32 max-md:mt-10"
-      ></div>
-      <div
-        class="flex items-stretch gap-2 ml-16 mt-16 self-start max-md:ml-2.5 max-md:mt-10"
-      >
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a708cc8f8a484ba295533cce7c08710760a3df16009df19a06b737b76e1cd26?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-          class="aspect-[1.03] object-contain object-center w-8 fill-red-600 overflow-hidden shrink-0 max-w-full"
-        />
-        <div
-          class="text-black text-4xl font-bold leading-9 grow whitespace-nowrap self-start"
-        >
-          SC.
-        </div>
-      </div>
-      <div
-        class="text-black text-opacity-70 text-base leading-6 w-[576px] max-w-full ml-16 mt-10 self-start"
-      >
-        We don’t just sell shoes, we sell memories and collectibles. We collect
-        the best in the best with an attention to all little details. we know that
-        shoes speaks louder than words that’s why we’ve mastered the science of
-        good sneakers.
-      </div>
-      <div
-        class="self-center flex w-full max-w-[1182px] items-stretch justify-between gap-5 mt-14 max-md:max-w-full max-md:flex-wrap max-md:justify-center max-md:mt-10"
-      >
-        <div
-          class="flex items-start justify-between gap-3.5 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
-        >
-          <div
-            class="text-black text-opacity-70 text-base leading-6 self-center grow whitespace-nowrap my-auto"
-          >
-            Don’t missout on once-in-a-while-deals:
-          </div>
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/502620f48dd0fddc41b7d767a10e7fc686df68300ce02a44b88cfb09981d9350?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-            class="aspect-square object-contain object-center w-8 overflow-hidden self-stretch shrink-0 max-w-full"
-          />
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7fa025ce80eb1e39128c42dfcb4014b07d49feece2cf6fa2fe195a5e29e9132a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-            class="aspect-square object-contain object-center w-8 overflow-hidden self-stretch shrink-0 max-w-full"
-          />
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/97eca0bc768b03e310275df0b2387b8975fbaf7c33e80b06e289ee9039e4ab07?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-            class="aspect-square object-contain object-center w-8 overflow-hidden self-stretch shrink-0 max-w-full"
-          />
-        </div>
-        <div class="self-center flex items-stretch gap-2.5 my-auto">
-          <div
-            class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap"
-          >
-            Support line:
-          </div>
-          <div
-            class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap self-start"
-          >
-            +250 788 467 808
-          </div>
-        </div>
-        <div
-          class="text-black text-opacity-70 text-sm leading-5 self-center grow whitespace-nowrap my-auto"
-        >
-          Copyright 2021 © Sneaker City ltd
-        </div>
-      </div>
-    </div>
+      
   </div>
   
 {% endblock %}
