@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'orders',
+    'userSystem',
 
     'django_browser_reload',
 ]
@@ -149,3 +150,6 @@ INTERNAL_IPS = [
 ]
 
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+
+LOGIN_URL = '/login/'
+AUTH_USER_MODEL = 'userSystem.CustomUser'

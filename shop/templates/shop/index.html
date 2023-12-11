@@ -143,35 +143,15 @@
             {% endfor %}
           </div>
           
-          <div
-            class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0"
-          >
-            <div
-              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
-            >
-              <img
-                loading="lazy"
-                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
-                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
-              />
-              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
-                Nike Wobler
-              </div>
-              <div
-                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-5"
-              >
-                35, 000RWF
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <div class="flex items-center gap-2.5 mt-4 self-end">
-        <div
+        <a href="{% url 'shop:product_list' %}"
           class="text-black text-opacity-80 text-sm leading-6 grow whitespace-nowrap my-auto"
         >
           Посмотреть все
-        </div>
+      </a>
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/162e8c89d25b13f26307f37da73cc0bdd0e60d16a02c64afb72e111beadc4be3?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
