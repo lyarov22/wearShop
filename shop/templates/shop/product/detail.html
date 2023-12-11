@@ -46,6 +46,7 @@
               class="text-black text-xl whitespace-nowrap border grow justify-center pl-12 pr-16 py-6 rounded-2xl border-solid border-black items-start max-md:px-5"
             >
             <form action="{% url "cart:cart_add" product.id %}" method="post" class="">
+                {% csrf_token %}
                 <input type="submit" value="Добавить в корзину" class="underline underline-offset-4 cursor-pointer">
                 
     <label for="id_quantity">:</label>
@@ -94,7 +95,7 @@
 
 </select>
       
-      
+{% csrf_token %}
         <input type="hidden" name="update" value="False" id="id_update">
       
     

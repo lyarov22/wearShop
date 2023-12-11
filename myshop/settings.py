@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -153,3 +153,7 @@ NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 LOGIN_URL = '/login/'
 AUTH_USER_MODEL = 'userSystem.CustomUser'
+
+
+
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1']
