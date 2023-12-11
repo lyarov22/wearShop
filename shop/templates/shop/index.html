@@ -1,0 +1,359 @@
+{% extends "shop/base.html" %}
+{% load static tailwind_tags %}
+{% block title %}
+    Главная
+{% endblock %}
+{% block content %}
+<div class="bg-white flex flex-col items-stretch pb-9">
+    <div
+      class="flex w-full flex-col items-center pl-20 pr-16 pt-9 pb-3 max-md:max-w-full max-md:px-5"
+    >
+      <div class="w-full max-w-[1248px] max-md:max-w-full max-md:pr-5">
+        <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+          <div
+            class="flex flex-col items-stretch w-[47%] max-md:w-full max-md:ml-0"
+          >
+            <div class="flex grow flex-col mt-20 max-md:max-w-full max-md:mt-10">
+              <div
+                class="text-black text-7xl font-semibold leading-[88px] self-stretch max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+              >
+                Ws - магазин
+                <br />
+                премиум одежды
+              </div>
+              <div
+                class="text-black text-opacity-70 text-base leading-6 self-stretch mt-8 max-md:max-w-full"
+              >
+                Добро пожаловать в наш магазин.
+              </div>
+
+              <a href="{% url 'shop:product_list' %}"
+                class="text-white text-base font-bold leading-6 whitespace-nowrap bg-red-600 justify-center items-stretch mt-16 px-6 py-4 self-start max-md:mt-10 max-md:px-5"
+              >
+                Смотреть каталог
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[53%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <img
+              loading="lazy"
+              srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/32533fb5cf5f2fb20c5c703a6dc65b4fb9e51ec563ca2e45517b140d4814c606?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+              class="aspect-[1.22] object-contain object-center w-full overflow-hidden max-md:max-w-full max-md:mt-10 max-sm:hidden"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-between gap-5 mt-4 self-end items-start max-md:justify-center"
+      >
+        <div
+          class="shadow-sm bg-white flex grow basis-[0%] flex-col justify-center items-center px-0.5 rounded-md"
+        >
+          <img
+            loading="lazy"
+            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/28b59aa30b45b1ded9a2013fa003b14c7af184832994d87094ed40e903259f18?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-[1.19] object-contain object-center w-[76px] rounded overflow-hidden max-sm:hidden"
+          />
+        </div>
+        <div
+          class="bg-white flex grow basis-[0%] flex-col justify-center items-center px-2 rounded-md"
+        >
+          <img
+            loading="lazy"
+            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/cec20098291ee5970fb6b954437a92f7ecc92a6f21547fe575bf4390553b3912?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-16 overflow-hidden max-sm:hidden"
+          />
+        </div>
+        <div
+          class="bg-white flex grow basis-[0%] flex-col justify-center items-center px-2 rounded-md"
+        >
+          <img
+            loading="lazy"
+            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d3261d81a41aa03f4d6e7a80cfded187722a5059e2605b37b9dd48d809b926dd?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-16 overflow-hidden max-sm:hidden"
+          />
+        </div>
+        <div
+          class="bg-white flex grow basis-[0%] flex-col justify-center items-center px-2 rounded-md"
+        >
+          <img
+            loading="lazy"
+            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/81025e53c6a19425b8f41e544e121cbe26031f4dcbf70bee5313c32c27154289?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-16 overflow-hidden max-sm:hidden"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="z-[1] flex w-full flex-col -mt-12 px-16 max-md:max-w-full max-md:px-5 max-sm:pt-14"
+    >
+      <div
+        class="shadow-lg bg-white flex w-[644px] max-w-full items-start justify-between gap-4 ml-48 px-8 py-4 self-start max-md:flex-wrap max-md:justify-center max-md:px-5 max-sm:hidden"
+      >
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/a32d190c99af2d060a4f04d2ec120b97ee577632d9e0bbdd272f2ee2d7895d89?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+          class="aspect-square object-contain object-center w-24 overflow-hidden self-stretch shrink-0 max-w-full"
+        />
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2295cc864d82553c5d10d570a0be21469087296474d0b9761b982353409b64c?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+          class="aspect-square object-contain object-center w-24 overflow-hidden self-stretch shrink-0 max-w-full"
+        />
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed9bf62ff8af3ee1eb34a93ea65f0087e9e9e20db4afbddc7aef97daadb4072c?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+          class="aspect-square object-contain object-center w-24 overflow-hidden self-stretch shrink-0 max-w-full"
+        />
+        <div class="text-black text-opacity-80 text-base leading-6 my-auto">
+          Подберем одежду
+          <br />
+          вашей мечты
+        </div>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/55e7219b55cf38628051ba30acbe9524970684ecf76d9907277cc6bd42d5bd2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+          class="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full mt-14 self-end max-md:mt-10"
+        />
+      </div>
+      <div
+        class="text-black text-2xl font-bold leading-8 self-stretch whitespace-nowrap mt-10 max-md:max-w-full"
+      >
+        Новое поступление
+      </div>
+      <div class="self-stretch mt-10 max-md:max-w-full">
+        <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+          <div
+            class="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
+            >
+              <img
+                loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/372df2149939ecd1cff0fec681c8155270a68b8cd8ae49f5194ddbbe81dc90f0?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
+              />
+              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
+                Adiddas Beluga
+              </div>
+              <div
+                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-4"
+              >
+                20.000 тенге
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
+            >
+              <img
+                loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f7364f88f9f110053e23d31584bb2a1774ae48c37fa2ba46d3ad5736661d4f8a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
+              />
+              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
+                Nike Zoom
+              </div>
+              <div
+                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-5"
+              >
+                35, 000RWF
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
+            >
+              <img
+                loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/552be9daececddf14d72c21ab229b87147cfb07c75d3f30af29d6338d57e6204?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
+              />
+              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
+                Nike Air Jordan XT
+              </div>
+              <div
+                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-5"
+              >
+                35, 000RWF
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="bg-white flex grow flex-col items-stretch w-full pb-7 max-md:mt-6"
+            >
+              <img
+                loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/83ffb501471097e48b49cc6b23e6e62c3baef38c41d7ba6eb07c70b320644c9d?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="aspect-[1.01] object-contain object-center w-full overflow-hidden"
+              />
+              <div class="text-black text-lg leading-7 whitespace-nowrap mt-8">
+                Nike Wobler
+              </div>
+              <div
+                class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap mt-5"
+              >
+                35, 000RWF
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5 mt-4 self-end">
+        <div
+          class="text-black text-opacity-80 text-sm leading-6 grow whitespace-nowrap my-auto"
+        >
+          View all new arrivals
+        </div>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/162e8c89d25b13f26307f37da73cc0bdd0e60d16a02c64afb72e111beadc4be3?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+          class="aspect-square object-contain object-center w-3.5 overflow-hidden self-stretch shrink-0 max-w-full"
+        />
+      </div>
+      <div
+        class="text-black text-4xl font-bold leading-10 self-center whitespace-nowrap mt-28 max-md:mt-10"
+      >
+        Good sneakers
+      </div>
+      <div
+        class="text-black text-4xl font-bold leading-10 self-center whitespace-nowrap mt-4"
+      >
+        take you good places
+      </div>
+      <div
+        class="text-black text-opacity-70 text-base leading-6 self-center whitespace-nowrap mt-6"
+      >
+        look no further, this is where you find the best pair!
+      </div>
+      <div
+        class="self-center w-full max-w-[996px] mt-16 max-md:max-w-full max-md:mt-10"
+      >
+        <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+          <div
+            class="flex flex-col items-stretch w-[43%] max-md:w-full max-md:ml-0"
+          >
+            <div class="flex flex-col items-end max-md:mt-10">
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e159356763d2e1ddcf0272082fc6db8dc7fe7a438a24a16cf7d7dafadff069df?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="aspect-square object-contain object-center w-[152px] overflow-hidden z-[1] max-w-full"
+              />
+              <div class="text-black text-2xl leading-8 self-stretch mt-0">
+                Currated
+                <br />
+                & unique collection
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/979e73f59479d427f4b695932d1b1d0f62ef6a7e90ff301cf14c31281af17fff?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+              class="aspect-[1.5] object-contain object-center w-[228px] overflow-hidden shrink-0 max-w-full grow mt-32 max-md:mt-10"
+            />
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[27%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <div class="text-black text-2xl leading-8 my-auto max-md:mt-10">
+              Buy the latest
+              <br />
+              & define the trends
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-black text-2xl leading-8 self-center whitespace-nowrap mt-5"
+      >
+        100% Original sneakers
+      </div>
+      <div
+        class="bg-black bg-opacity-10 self-center w-[1184px] shrink-0 max-w-full h-px mt-32 max-md:mt-10"
+      ></div>
+      <div
+        class="flex items-stretch gap-2 ml-16 mt-16 self-start max-md:ml-2.5 max-md:mt-10"
+      >
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a708cc8f8a484ba295533cce7c08710760a3df16009df19a06b737b76e1cd26?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+          class="aspect-[1.03] object-contain object-center w-8 fill-red-600 overflow-hidden shrink-0 max-w-full"
+        />
+        <div
+          class="text-black text-4xl font-bold leading-9 grow whitespace-nowrap self-start"
+        >
+          SC.
+        </div>
+      </div>
+      <div
+        class="text-black text-opacity-70 text-base leading-6 w-[576px] max-w-full ml-16 mt-10 self-start"
+      >
+        We don’t just sell shoes, we sell memories and collectibles. We collect
+        the best in the best with an attention to all little details. we know that
+        shoes speaks louder than words that’s why we’ve mastered the science of
+        good sneakers.
+      </div>
+      <div
+        class="self-center flex w-full max-w-[1182px] items-stretch justify-between gap-5 mt-14 max-md:max-w-full max-md:flex-wrap max-md:justify-center max-md:mt-10"
+      >
+        <div
+          class="flex items-start justify-between gap-3.5 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+        >
+          <div
+            class="text-black text-opacity-70 text-base leading-6 self-center grow whitespace-nowrap my-auto"
+          >
+            Don’t missout on once-in-a-while-deals:
+          </div>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/502620f48dd0fddc41b7d767a10e7fc686df68300ce02a44b88cfb09981d9350?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-8 overflow-hidden self-stretch shrink-0 max-w-full"
+          />
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7fa025ce80eb1e39128c42dfcb4014b07d49feece2cf6fa2fe195a5e29e9132a?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-8 overflow-hidden self-stretch shrink-0 max-w-full"
+          />
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/97eca0bc768b03e310275df0b2387b8975fbaf7c33e80b06e289ee9039e4ab07?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-8 overflow-hidden self-stretch shrink-0 max-w-full"
+          />
+        </div>
+        <div class="self-center flex items-stretch gap-2.5 my-auto">
+          <div
+            class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap"
+          >
+            Support line:
+          </div>
+          <div
+            class="text-black text-opacity-70 text-base leading-6 whitespace-nowrap self-start"
+          >
+            +250 788 467 808
+          </div>
+        </div>
+        <div
+          class="text-black text-opacity-70 text-sm leading-5 self-center grow whitespace-nowrap my-auto"
+        >
+          Copyright 2021 © Sneaker City ltd
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
