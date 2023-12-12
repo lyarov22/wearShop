@@ -14,7 +14,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)  # Автоматически входить пользователя после успешной регистрации
-            return redirect('mySite:index')
+            return redirect('index')
     else:
         form = RegistrationForm()
     return render(request, 'userSystem/register.html', {'form': form})
