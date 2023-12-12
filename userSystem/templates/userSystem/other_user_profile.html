@@ -1,24 +1,27 @@
 {% extends "shop/base.html" %}
+
+{% block title %}view profile{% endblock %}
+
 {% block content %}
-{% if profile %}
-    <h2>Профиль пользователя</h2>
-    <p>Имя пользователя: {{ profile.user.username }}</p>
-    <p>Почта: {{ profile.user.email }}</p>
+<div class="container mx-auto p-4">
+    {% if profile %}
+        <h2 class="text-2xl font-bold mb-4">Профиль пользователя</h2>
+        <p>Имя пользователя: {{ profile.user.username }}</p>
+        <p>Почта: {{ profile.user.email }}</p>
 
-    <p>Уровень: {{ profile.get_level_display }}</p>
+        <p>Уровень: {{ profile.get_level_display }}</p>
 
-    <p>Имя: {{ profile.name }}</p>
-    <p>Фамилия: {{ profile.surname }}</p>
-    <p>Биография: {{ profile.bio }}</p>
+        <p>Имя: {{ profile.name }}</p>
+        <p>Фамилия: {{ profile.surname }}</p>
+        <p>Биография: {{ profile.bio }}</p>
 
-    <p>Аватар:</strong></p>
-    <img src="{{ profile.get_avatar_url }}" alt="Аватар пользователя">
+        <p>Аватар:</p>
+        <img src="{{ profile.get_avatar_url }}" alt="Аватар пользователя" class="w-16 h-16 rounded-full mb-4">
 
-    <p>Дата регистрации: {{ profile.user.date_joined }}</p>
-    <p>Последний вход: {{ profile.user.last_login }}</p>
-
-{% else %}
-    <p>{{ error_message }}</p>
-{% endif %}
-
+        <p>Дата регистрации: {{ profile.user.date_joined }}</p>
+        <p>Последний вход: {{ profile.user.last_login }}</p>
+    {% else %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+</div>
 {% endblock %}

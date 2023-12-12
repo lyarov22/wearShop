@@ -9,7 +9,7 @@ from userSystem import views as user_views
 app_name = 'myshop'
 
 urlpatterns = [
-    path('favicon.ico/', RedirectView.as_view(url='/static/img/test.svg', permanent=True), name='favicon'),
+    path('favicon.ico/', RedirectView.as_view(url='/static/img/sh.png', permanent=True), name='favicon'),
     # login system
     path('register/', user_views.register, name='register'),
     path('login/', user_views.user_login, name='login'),

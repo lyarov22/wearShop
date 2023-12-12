@@ -28,7 +28,7 @@ def user_login(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('mySite:index')
+                return redirect('index')
 
     else:
         form = LoginForm()
@@ -36,7 +36,7 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
-    return redirect('mySite:index')
+    return redirect('index')
 
 
 # profile system
