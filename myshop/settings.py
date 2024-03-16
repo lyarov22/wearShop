@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-iz_k@iljmi$eq%aa)%o5rjt-p++w*yq^rnr5-f5=884srzzv80
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','192.168.133.51']
+ALLOWED_HOSTS = ['127.0.0.1', 'wearshop.onrender.com']
 
 
 # Application definition
@@ -44,8 +44,6 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'userSystem',
-
-    'django_browser_reload',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_browser_reload.middleware.BrowserReloadMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'myshop.urls'
@@ -156,4 +154,4 @@ AUTH_USER_MODEL = 'userSystem.CustomUser'
 
 
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://wearshop.onrender.com']
