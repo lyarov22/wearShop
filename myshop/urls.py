@@ -27,8 +27,6 @@ urlpatterns = [
     path('', include('shop.urls')),
     path('', include(('shop.urls', 'shop'), namespace='shop')),
 
-    path("__reload__/", include("django_browser_reload.urls")),
-
 ]
 
 if settings.DEBUG:
