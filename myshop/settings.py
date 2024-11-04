@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-iz_k@iljmi$eq%aa)%o5rjt-p++w*yq^rnr5-f5=884srzzv80
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'wearshop.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', '*']
 
 
 # Application definition
@@ -154,4 +154,4 @@ AUTH_USER_MODEL = 'userSystem.CustomUser'
 
 
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://wearshop.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://shanyraqwear.onrender.com']
